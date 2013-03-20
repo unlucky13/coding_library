@@ -84,7 +84,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));} /*/* this will return th
 
 
 
-/*                     MST - From http://www.shafaetsplanet.com
+/*                     MST_Kruskal - From http://www.shafaetsplanet.com
 ========================================================================================================================*/
 
 struct edge
