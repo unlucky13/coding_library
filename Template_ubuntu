@@ -1,0 +1,42 @@
+/*
+ Author                             :     unlucky_13
+ Probs_link                         :
+ Algorithm_Used                     :
+
+*/
+
+#include<cstdio>
+#include<sstream>
+#include<cstdlib>
+#include<cctype>
+#include<cmath>
+#include<algorithm>
+#include<set>
+#include<queue>
+#include<stack>
+#include<list>
+#include<iostream>
+#include<fstream>
+#include<numeric>
+#include<string>
+#include<vector>
+#include<cstring>
+#include<map>
+#include<iterator>
+#define LL long long int
+//const int MIN
+//const int MAX
+using namespace std;
+
+int main() {
+  freopen("home\\mazhar\\Destop\\in.txt","r",stdin) ;
+
+
+
+
+
+
+
+
+	return 0;
+}
