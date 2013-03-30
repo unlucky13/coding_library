@@ -24,8 +24,8 @@
 #include<map>
 #include<iterator>
 #define LL long long int
-//const int MIN
-//const int MAX
+//const int MIN=;
+//const int MAX=;
 
 using namespace std;
 
