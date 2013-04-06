@@ -23,13 +23,13 @@
 #include<cstring>
 #include<map>
 #include<iterator>
-#define LL long long int
-//const int MIN
-//const int MAX
+#define i64 long long int
+//const int min=;
+//const int maxn=;
 using namespace std;
 
 int main() {
-  freopen("home\\mazhar\\Destop\\in.txt","r",stdin) ;
+  freopen("//home//mazhar//Destop//in.txt","r",stdin) ;
 
 
 
