@@ -206,6 +206,7 @@ void dfs(int here,int par) {
       	s.pop() ;
       	scc[elem]=components ;
       } while(elem!=here) ;
+      components++ ;
     }
 
   }
