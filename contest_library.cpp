@@ -181,7 +181,7 @@ void reset()
      while(!s.empty()) s.pop() ;
      components = 0 ;
 }
-void dfs(int here) {
+void dfs(int here,int par) {
 
     idx[here] = lowlink[here] = tim++;
     s.push(here);
