@@ -169,31 +169,36 @@ int dijkstra(int source, int destination) {
 
 /*                                                   Strongly Connected Components(Tarjan) frome Topcoder:
 =========================================================================================================================================*/
+int idx[maxn],tim,lowlink[maxn],scc[maxn],components;
+stack<int>s ;
+vector<int>adj[maxn] ;
 
 int dfs(int here) {
-	
-    index[here] = lowlink[here] = time++;
+
+    idx[here] = lowlink[here] = tim++;
     s.push(here);
-    for(int i = 0; i < adj[here].size(); i++)  {
+    for(int i = 0; i <(int)adj[here].size(); i++)  {
       int there = adj[here][i];
-      if(index[there] == -1) {
+      if(idx[there] == -1) {
         lowlink[here] = min(lowlink[here], dfs(there));
       }
-      else if(scc[there] == -1) {
-      	
+      else if(scc[there]==-1){
+
       	/* This line is really trciky .) is means The lowlink[here] is defined as the lowest-numbered vertex reachable from the subtree rooted at here via a single edge in the same component as here.*/
-      	
-        lowlink[here] = min(lowlink[here], index[there]);
+
+        lowlink[here] = min(lowlink[here], idx[there]);
       }
     }
-    if(lowlink[here] == index[here]) {
-      do{
-      	int elem = s.top() ;
+    if(lowlink[here] == idx[here]) {
+
+    	int elem ;
+    	do{
+      	elem = s.top() ;
       	s.pop() ;
-      	ssc[elem]=components ;   	
-      }while(elem!=here) 
+      	scc[elem]=components ;
+      } while(elem!=here) ;
     }
-    
+
     return lowlink[here];
   }
 
