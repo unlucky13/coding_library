@@ -181,14 +181,15 @@ void reset()
      while(!s.empty()) s.pop() ;
      components = 0 ;
 }
-int dfs(int here) {
+void dfs(int here) {
 
     idx[here] = lowlink[here] = tim++;
     s.push(here);
     for(int i = 0; i <(int)adj[here].size(); i++)  {
       int there = adj[here][i];
       if(idx[there] == -1) {
-        lowlink[here] = min(lowlink[here], dfs(there));
+      	dfs(there,here) ;
+        lowlink[here] = min(lowlink[here],lowlink[there] );
       }
       else if(scc[there]==-1){
 
@@ -207,7 +208,6 @@ int dfs(int here) {
       } while(elem!=here) ;
     }
 
-    return lowlink[here];
   }
 
 
