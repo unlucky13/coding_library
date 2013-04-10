@@ -172,7 +172,15 @@ int dijkstra(int source, int destination) {
 int idx[maxn],tim,lowlink[maxn],scc[maxn],components;
 stack<int>s ;
 vector<int>adj[maxn] ;
-
+void reset()
+{
+     
+     memset(scc,-1,sizeof(scc)) ;
+     memset(idx,-1,sizeof(idx)) ;
+     for(int i=0;i<=maxn;i++) adj[i].clear() ;
+     while(!s.empty()) s.pop() ;
+     components = 0 ;
+}
 int dfs(int here) {
 
     idx[here] = lowlink[here] = tim++;
